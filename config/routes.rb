@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :zones
+  resources :floors
   resources :multimedia
   resources :tags
   resources :descriptions
