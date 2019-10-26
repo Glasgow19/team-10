@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2019_10_26_163555) do
     t.index ["exhibit_id"], name: "index_multimedia_on_exhibit_id"
   end
 
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "name"
+    t.bigint "exhibit_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exhibit_id"], name: "index_tags_on_exhibit_id"
+  end
+
   add_foreign_key "descriptions", "exhibits"
   add_foreign_key "multimedia", "exhibits"
+  add_foreign_key "tags", "exhibits"
 end
