@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: bug_tracker_dev
+  database: gsc_dev
 
 test:
   <<: *default
-  database: bug_tracker_test
+  database: gsc_test
 
 production:
   <<: *default
-  database: bug_tracker_prod
+  database: gsc_prod
