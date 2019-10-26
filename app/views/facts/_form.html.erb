@@ -1,0 +1,27 @@
+<%= form_with(model: fact, local: true) do |form| %>
+  <% if fact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fact.errors.count, "error") %> prohibited this fact from being saved:</h2>
+
+      <ul>
+        <% fact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exhibit_id %>
+    <%= form.text_field :exhibit_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
