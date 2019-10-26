@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_172311) do
+ActiveRecord::Schema.define(version: 2019_10_26_214226) do
 
   create_table "descriptions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_10_26_172311) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "zone_id"
+    t.index ["zone_id"], name: "index_exhibits_on_zone_id"
   end
 
   create_table "facts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -58,11 +60,9 @@ ActiveRecord::Schema.define(version: 2019_10_26_172311) do
 
   create_table "zones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.bigint "exhibit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "floor_id", null: false
-    t.index ["exhibit_id"], name: "index_zones_on_exhibit_id"
     t.index ["floor_id"], name: "index_zones_on_floor_id"
   end
 
@@ -70,6 +70,5 @@ ActiveRecord::Schema.define(version: 2019_10_26_172311) do
   add_foreign_key "facts", "exhibits"
   add_foreign_key "multimedia", "exhibits"
   add_foreign_key "tags", "exhibits"
-  add_foreign_key "zones", "exhibits"
   add_foreign_key "zones", "floors"
 end
