@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_171429) do
+ActiveRecord::Schema.define(version: 2019_10_26_172311) do
 
   create_table "descriptions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2019_10_26_171429) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "facts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "text"
+    t.bigint "exhibit_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["exhibit_id"], name: "index_facts_on_exhibit_id"
   end
 
   create_table "floors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -59,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_171429) do
   end
 
   add_foreign_key "descriptions", "exhibits"
+  add_foreign_key "facts", "exhibits"
   add_foreign_key "multimedia", "exhibits"
   add_foreign_key "tags", "exhibits"
   add_foreign_key "zones", "exhibits"
