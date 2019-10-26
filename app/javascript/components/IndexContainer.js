@@ -1,5 +1,8 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Logo from "../../assets/images/gsc_logo.svg";
 
 import PropTypes from "prop-types";
@@ -27,6 +30,15 @@ class IndexContainer extends React.Component {
             className="d-inline-block align-top"
           />
         </Navbar>
+        <Container>
+          <Row>
+            <Col>blah</Col>
+          </Row>
+          <Row>
+            <Col>1 of 3</Col>
+            <Col>2 of 3</Col>
+          </Row>
+        </Container>
       </React.Fragment>
     );
   }
