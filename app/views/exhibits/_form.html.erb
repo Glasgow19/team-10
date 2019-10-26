@@ -1,10 +1,10 @@
-<%= form_with(model: exhibt, local: true) do |form| %>
-  <% if exhibt.errors.any? %>
+<%= form_with(model: exhibit, local: true) do |form| %>
+  <% if exhibit.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(exhibt.errors.count, "error") %> prohibited this exhibt from being saved:</h2>
+      <h2><%= pluralize(exhibit.errors.count, "error") %> prohibited this exhibit from being saved:</h2>
 
       <ul>
-        <% exhibt.errors.full_messages.each do |message| %>
+        <% exhibit.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
