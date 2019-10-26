@@ -1,3 +1,4 @@
 class Zone < ApplicationRecord
-  belongs_to :exhibit
+  has_many :exhibit
+  validates :name, presence: true, uniqueness: true
 end
