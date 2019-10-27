@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :tags
   resources :descriptions
   resources :exhibits
+  get 'floor_view/:id', to: 'pages#floor_view'
   root 'pages#index', as: 'index'
 end
