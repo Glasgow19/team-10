@@ -7,9 +7,20 @@ import Image from "react-bootstrap/Image";
 import Logo from "../../assets/images/gsc_logo.svg";
 import MapImage from "../../assets/images/floor_1.png";
 import PropTypes from "prop-types";
+import ModalViewer from "./ModalViewer";
 import ImageMapper from 'react-image-mapper';
 
 class FloorViewer extends React.Component {
+  state = { show: false };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
   clickedOutside(evt) {
   }
 
@@ -66,7 +77,9 @@ class FloorViewer extends React.Component {
         <Container fluid>
           <Row className="text-center">
             <Col>
-              <h1 className="display-4">Floor {this.props.params[0].floor_id} </h1>
+              <h1 className="display-4">
+                Floor {this.props.params[0].floor_id}{" "}
+              </h1>
             </Col>
           </Row>
           <Row className="text-center">
@@ -77,11 +90,15 @@ class FloorViewer extends React.Component {
                 src={MapImage}
                 map={MAP}
                 onImageClick={evt => this.clickedOutside(evt)}
-                onClick={area => this.clicked(area)}
+                onClick={this.showModal}
               />
             </Col>
           </Row>
         </Container>
+        <ModalViewer show={this.state.show} handleClose={this.hideModal}>
+          <p>Modal</p>
+          <p>Data</p>
+        </ModalViewer>
       </React.Fragment>
     );
   }
