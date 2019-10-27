@@ -26,4 +26,14 @@ zoneI = Zone.create!(name: "I", floor_id: lvl3.id)
 
 FeelyBox = Exhibit.create(name: "Feely Box", zone_id: zoneA.id)
 
+howTall = Exhibit.create(name: "How Tall Are You?", zone_id: zoneG.id)
+howSprint = Exhibit.create(name: "How Fast Can You Sprint?", zone_id: zoneG.id)
+howStrong = Exhibit.create(name: "How Strong Is Your Grip?", zone_id: zoneG.id)
+howJump = Exhibit.create(name: "How High Can You Jump?", zone_id: zoneG.id)
+howReact = Exhibit.create(name: "How fast are your reactions?", zone_id: zoneG.id)
 
+antiViral = Exhibit.create(name: "Antiviral Hero", zone_id: zoneI.id)
+goingViral = Exhibit.create(name: "Going Viral", zone_id: zoneI.id)
+holophonic = Exhibit.create(name: "Holophonic Macrophage Journey", zone_id: zoneI.id)
+mucusNinjas = Exhibit.create(name: "Mucus Ninjas", zone_id: zoneI.id)
+bendyMicro = Exhibit.create(name: "Bendy Microscope", zone_id: zoneI.id)
