@@ -63,3 +63,17 @@ desc_goingViral = Description.create(text: "An IT game that allows visitors to t
 desc_holophonic = Description.create(text: "A wall-mounted exhibit that allows visitors to listen to a 3D audio story which features personified cells of the immune system. It consists of 2 pairs of headphones, 2 audio control panels (with start and volume buttons), 2 moveable stools and a wall graphic featuring cartoon illustrations of the story. When not in use, the headphones sit on a hook. The audio story lasts 6 minutes and takes advantage of binaural recording to create a 3D audio experience.", exhibit_id: holophonic.id)
 desc_mucusNinjas = Description.create(text: "A motion-sensing exhibit that allows visitors to act as a piece of nasal mucus by defending the body from incoming viruses. It consists of a projected screen, Microsoft Kinect sensor and speakers. The playing area is located within a walled zone and marked on the floor. Note, it is a one-player game; the presence of other visitors in the playing area interferes with the motion sensors.", exhibit_id: mucusNinjas.id)
 desc_bendyMicro = Description.create(text: "A wall-mounted exhibit that allows visitors to view and record images of their skin from a hand-held microscope. It consists of a video microscope, touchscreen and barcode scanner. The microscope is attached to the wall by flexible tubing and sits in a cradle when not in use.", exhibit_id: bendyMicro.id)
+
+#Tags
+
+tags_howTall = Tag.create(physical: 1, exhibit_id: howTall.id)
+tags_howSprint = Tag.create(physical: 1, exhibit_id: howSprint.id)
+tags_howStrong = Tag.create(physical: 1, exhibit_id: howStrong.id)
+tags_howJump = Tag.create(physical: 1, exhibit_id: howJump.id)
+tags_howReact = Tag.create(physical: 1, exhibit_id: howReact.id)
+
+tags_smokingBody = Tag.create(visual_impairment: 1, exhibit_id: smokingBody.id)
+tags_holophonic = Tag.create(hearing_impairment: 1, exhibit_id: holophonic.id)
+
+tags_antiViral = Tag.create(autism: 1, epilepsy: 1, exhibit_id: antiViral.id)
+tags_goingViral = Tag.create(autism: 1, dementia: 1, exhibit_id: goingViral.id)
