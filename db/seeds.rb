@@ -24,5 +24,6 @@ zoneI = Zone.create!(name: "I", floor_id: lvl3.id)
 
 #Exhibits
 
-FeelyBox = Exhibit.new(name: "Feely Box", zone_id: zoneA.id).save!
+FeelyBox = Exhibit.create(name: "Feely Box", zone_id: zoneA.id)
+
 
