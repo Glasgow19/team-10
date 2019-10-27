@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import ModalViewer from "./ModalViewer";
 import ImageMapper from 'react-image-mapper';
 import Button from "react-bootstrap/Button";
+import Hearing from "../../assets/images/hearing_impairment.png"
 
 class FloorViewer extends React.Component {
   state = { show: false };
@@ -30,6 +31,8 @@ class FloorViewer extends React.Component {
 	}
 
   render() {
+    const { exhibits } = this.props;
+
     var navStyle = {
       background: '#2e2d44'
     };
@@ -78,8 +81,10 @@ class FloorViewer extends React.Component {
         <Container fluid>
           <Row>
             <Col>
-              <div className='mt-3'>
-              <Button variant="light" size="lg" href="/">Back</Button>
+              <div className="mt-3">
+                <Button variant="light" size="lg" href="/">
+                  Back
+                </Button>
               </div>
             </Col>
           </Row>
@@ -104,8 +109,49 @@ class FloorViewer extends React.Component {
           </Row>
         </Container>
         <ModalViewer show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-          <p>Data</p>
+          <Row>
+            <Col sm={6} className="m-2">
+              <h3>Description</h3>
+              <p>
+                A free-standing exhibit that allows visitors to measure their
+                height before adding their result to a graph of height versus
+                age. The exhibit features an ultrasound height device,
+                touchscreen and barcode scanner. Results are added to the graph
+                using blue or pink sticker dots, which are available in a recess
+                under the screen.
+              </p>
+            </Col>
+            <Col sm={4}>
+              <h3>Suitable for</h3>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <p>This exhibition is audio described </p>
+                  <span class="badge badge-primary badge-pill">
+                    <img
+                      alt=""
+                      src={Hearing}
+                      width="30"
+                      height="30"
+                      className="d-inline-block align-top"
+                    />
+                  </span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Dapibus ac facilisis in
+                  <span class="badge badge-primary badge-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge badge-primary badge-pill">1</span>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm>Test</Col>
+            <Col sm>Test</Col>
+            <Col sm>Test</Col>
+          </Row>
         </ModalViewer>
       </React.Fragment>
     );
