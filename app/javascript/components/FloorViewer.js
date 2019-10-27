@@ -10,6 +10,9 @@ import PropTypes from "prop-types";
 import ModalViewer from "./ModalViewer";
 import ImageMapper from 'react-image-mapper';
 import Button from "react-bootstrap/Button";
+import Hearing from "../../assets/images/hearing_impairment.png"
+import Visual from "../../assets/images/visual_impairment.png"
+import Placeholder from "../../assets/images/placeholder.png"
 
 class FloorViewer extends React.Component {
   state = { show: false };
@@ -30,6 +33,8 @@ class FloorViewer extends React.Component {
 	}
 
   render() {
+    const { exhibits } = this.props;
+
     var navStyle = {
       background: '#2e2d44'
     };
@@ -78,8 +83,10 @@ class FloorViewer extends React.Component {
         <Container fluid>
           <Row>
             <Col>
-              <div className='mt-3'>
-              <Button variant="light" size="lg" href="/">Back</Button>
+              <div className="mt-3">
+                <Button variant="light" size="lg" href="/">
+                  Back
+                </Button>
               </div>
             </Col>
           </Row>
@@ -104,8 +111,75 @@ class FloorViewer extends React.Component {
           </Row>
         </Container>
         <ModalViewer show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-          <p>Data</p>
+          <Row>
+            <Col sm={6} className="m-2">
+              <h3>Description</h3>
+              <p>
+                A free-standing exhibit that allows visitors to measure their
+                height before adding their result to a graph of height versus
+                age. The exhibit features an ultrasound height device,
+                touchscreen and barcode scanner. Results are added to the graph
+                using blue or pink sticker dots, which are available in a recess
+                under the screen.
+              </p>
+            </Col>
+            <Col sm={4}>
+              <h3>Suitable for</h3>
+              <ul className="list-group">
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  <p>This exhibition is audio described</p>
+                  <span className="badge badge-primary badge-pill">
+                    <img
+                      alt=""
+                      src={Hearing}
+                      width="30"
+                      height="30"
+                      className="d-inline-block align-top"
+                    />
+                  </span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  <p>This exhibition supports people with visual impairment</p>
+                  <span className="badge badge-primary badge-pill">
+                    <img
+                      alt=""
+                      src={Visual}
+                      width="30"
+                      height="30"
+                      className="d-inline-block align-top"
+                    />
+                  </span>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm>
+              <img
+                alt=""
+                src={Placeholder}
+                width="350"
+                height="300"
+                className="d-inline-block align-top"
+              />
+            </Col>
+            <Col sm>
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Key Facts</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                    <li class="list-group-item">Fourth item</li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+            <Col sm>Test</Col>
+          </Row>
         </ModalViewer>
       </React.Fragment>
     );
