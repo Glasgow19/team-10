@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   def floor_view
     @zones = Floor.floor_zones params[:id]
   end
+
+  def zones_view
+    @exhibits = Zone.zone_exhibits params[:id]
+  end
 end
