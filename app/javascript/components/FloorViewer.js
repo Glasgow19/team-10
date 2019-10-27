@@ -97,16 +97,11 @@ class FloorViewer extends React.Component {
                 Floor {this.props.params[0].floor_id}{" "}
               </h1>
             </Col>
-            <Col>
-              <h3>
-                Filters
-              </h3>
-            </Col>
           </Row>
           <Row>
             <Col>
               <ImageMapper
-                width={750}
+                width={1050}
                 imgWidth={3000}
                 src={MapImage}
                 map={MAP}
@@ -114,16 +109,18 @@ class FloorViewer extends React.Component {
                 onClick={this.showModal}
               />
             </Col>
+          </Row>
+          <Row>
             <Col>
-             	<Form.Check type='checkbox' label='Autism'/>
+              <h3>
+                Filters
+              </h3>
+              <Form.Check type='checkbox' label='Autism'/>
              	<Form.Check type='checkbox' label='Visual Impairment'/>
              	<Form.Check type='checkbox' label='Hearing Impairment'/>
              	<Form.Check type='checkbox' label='Dementia'/>
              	<Form.Check type='checkbox' label='Epilepsy'/>
              	<Form.Check type='checkbox' label='Physical'/>
-
-
-
             </Col>
           </Row>
         </Container>
