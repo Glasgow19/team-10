@@ -123,7 +123,7 @@ class FloorViewer extends React.Component {
                 under the screen.
               </p>
             </Col>
-            <Col sm={4}>
+            <Col sm={4} className="m-2">
               <h3>Suitable for</h3>
               <ul className="list-group">
                 <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -169,11 +169,11 @@ class FloorViewer extends React.Component {
                   <h3 class="panel-title">Key Facts</h3>
                 </div>
                 <div class="panel-body">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item">First item</li>
-                    <li class="list-group-item">Second item</li>
-                    <li class="list-group-item">Third item</li>
-                    <li class="list-group-item">Fourth item</li>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Tall people make $789 more each year per extra inch</li>
+                    <li class="list-group-item">You Grow Fastest In Your First Year</li>
+                    <li class="list-group-item">Your Height Changes All Day Long</li>
+                    <li class="list-group-item">You Start 'Shrinking' at Age 40</li>
                   </ul>
                 </div>
               </div>
