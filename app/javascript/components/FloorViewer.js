@@ -153,8 +153,8 @@ class FloorViewer extends React.Component {
               </ul>
             </Col>
           </Row>
-          <Row>
-            <Col sm>
+          <Row className="mt-2">
+            <Col sm className="ml-2">
               <img
                 alt=""
                 src={Placeholder}
@@ -178,7 +178,6 @@ class FloorViewer extends React.Component {
                 </div>
               </div>
             </Col>
-            <Col sm>Test</Col>
           </Row>
         </ModalViewer>
       </React.Fragment>
