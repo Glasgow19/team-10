@@ -10,6 +10,16 @@ import PropTypes from "prop-types";
 import ImageMapper from 'react-image-mapper';
 
 class IndexContainer extends React.Component {
+  clickedOutside(evt) {
+		const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
+		this.setState({
+			msg: `You clicked on the image at coords ${JSON.stringify(coords)} !`
+		});
+  }
+
+  clicked(area) {
+		console.log(area);
+	}
 
   render() {
     var navStyle = {
@@ -40,7 +50,6 @@ class IndexContainer extends React.Component {
       ]
     };
 
-
     return (
       <React.Fragment>
         <link
@@ -60,12 +69,26 @@ class IndexContainer extends React.Component {
         </Navbar>
         <Container>
           <Row>
-            <Col><h1>Interactive Floor Map</h1></Col>
+            <Col>
+              <h1>Interactive Floor Map</h1>
+            </Col>
           </Row>
           <Row>
-            <Col sm={8}><ImageMapper width={700} imgWidth={3000} src={MapImage} map={MAP} className="img-fluid"/></Col>
+            <Col sm={8}>
+              <ImageMapper
+                width={700}
+                imgWidth={3000}
+                src={MapImage}
+                map={MAP}
+                className="img-fluid"
+                onImageClick={evt => this.clickedOutside(evt)}
+                onClick={area => this.clicked(area)}
+              />
+            </Col>
             <Col sm={4}>
-              <Row><h1>Accessability Filters</h1></Row>
+              <Row>
+                <h1>Accessability Filters</h1>
+              </Row>
               <Row>Checkboxes here</Row>
             </Col>
           </Row>
