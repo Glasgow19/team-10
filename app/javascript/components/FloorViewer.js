@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import Form from "react-bootstrap/Form";
 import Logo from "../../assets/images/gsc_logo.svg";
 import MapImage from "../../assets/images/floor_1.png";
 import PropTypes from "prop-types";
@@ -90,23 +91,39 @@ class FloorViewer extends React.Component {
               </div>
             </Col>
           </Row>
-          <Row className="text-center">
+          <Row className="text-left">
             <Col>
               <h1 className="display-4">
                 Floor {this.props.params[0].floor_id}{" "}
               </h1>
             </Col>
+            <Col>
+              <h3>
+                Filters
+              </h3>
+            </Col>
           </Row>
-          <Row className="text-center">
-            <Col className="d-flex justify-content-center">
+          <Row>
+            <Col>
               <ImageMapper
-                width={1050}
+                width={750}
                 imgWidth={3000}
                 src={MapImage}
                 map={MAP}
                 onImageClick={evt => this.clickedOutside(evt)}
                 onClick={this.showModal}
               />
+            </Col>
+            <Col>
+             	<Form.Check type='checkbox' label='Autism'/>
+             	<Form.Check type='checkbox' label='Visual Impairment'/>
+             	<Form.Check type='checkbox' label='Hearing Impairment'/>
+             	<Form.Check type='checkbox' label='Dementia'/>
+             	<Form.Check type='checkbox' label='Epilepsy'/>
+             	<Form.Check type='checkbox' label='Physical'/>
+
+
+
             </Col>
           </Row>
         </Container>
