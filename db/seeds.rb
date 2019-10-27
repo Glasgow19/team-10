@@ -24,25 +24,25 @@ zoneI = Zone.create!(name: "I", floor_id: lvl3.id, coordinates: '1951,458,2112,5
 
 #Exhibits
 
-feelyBox = Exhibit.create(name: "Feely Box", zone_id: zoneA.id)
+feelyBox = Exhibit.create(name: "Feely Box", zone_id: zoneA.id, coordinates: '1561,636,40')
 
-howTall = Exhibit.create(name: "How Tall Are You?", zone_id: zoneG.id)
-howSprint = Exhibit.create(name: "How Fast Can You Sprint?", zone_id: zoneG.id)
-howStrong = Exhibit.create(name: "How Strong Is Your Grip?", zone_id: zoneG.id)
-howJump = Exhibit.create(name: "How High Can You Jump?", zone_id: zoneG.id)
-howReact = Exhibit.create(name: "How fast are your reactions?", zone_id: zoneG.id)
+howTall = Exhibit.create(name: "How Tall Are You?", zone_id: zoneG.id, coordinates: '1538,549,42')
+howSprint = Exhibit.create(name: "How Fast Can You Sprint?", zone_id: zoneG.id, coordinates: '1561,636,40')
+howStrong = Exhibit.create(name: "How Strong Is Your Grip?", zone_id: zoneG.id, coordinates: '1219,545,32')
+howJump = Exhibit.create(name: "How High Can You Jump?", zone_id: zoneG.id, coordinates: '1219,545,32')
+howReact = Exhibit.create(name: "How fast are your reactions?", zone_id: zoneG.id, coordinates: '1290,545,35')
 
-smokingBody = Exhibit.create(name: "What Does Smoking Do To Your Body?", zone_id: zoneH.id)
-smokingLungs = Exhibit.create(name: "How Does Smoking Damage Your Lungs?", zone_id: zoneH.id)
-affectsBreathing = Exhibit.create(name: "What Affects Your Breathing?", zone_id: zoneH.id)
-heartECG = Exhibit.create(name: "Heart ECG: What Does Your Heart Trace Look Like?", zone_id: zoneH.id)
-veins = Exhibit.create(name: "Where Are Your Veins?", zone_id: zoneH.id)
+smokingBody = Exhibit.create(name: "What Does Smoking Do To Your Body?", zone_id: zoneH.id, coordinates: '1561,636,40')
+smokingLungs = Exhibit.create(name: "How Does Smoking Damage Your Lungs?", zone_id: zoneH.id, coordinates: '1408,457,39')
+affectsBreathing = Exhibit.create(name: "What Affects Your Breathing?", zone_id: zoneH.id, coordinates: '950,460,37')
+heartECG = Exhibit.create(name: "Heart ECG: What Does Your Heart Trace Look Like?", zone_id: zoneH.id, coordinates: '993,654,37')
+veins = Exhibit.create(name: "Where Are Your Veins?", zone_id: zoneH.id, coordinates: '1200,440,24')
 
-antiViral = Exhibit.create(name: "Antiviral Hero", zone_id: zoneI.id)
-goingViral = Exhibit.create(name: "Going Viral", zone_id: zoneI.id)
-holophonic = Exhibit.create(name: "Holophonic Macrophage Journey", zone_id: zoneI.id)
-mucusNinjas = Exhibit.create(name: "Mucus Ninjas", zone_id: zoneI.id)
-bendyMicro = Exhibit.create(name: "Bendy Microscope", zone_id: zoneI.id)
+antiViral = Exhibit.create(name: "Antiviral Hero", zone_id: zoneI.id, coordinates: '843,642,40')
+goingViral = Exhibit.create(name: "Going Viral", zone_id: zoneI.id, coordinates: '1838,441,37')
+holophonic = Exhibit.create(name: "Holophonic Macrophage Journey", zone_id: zoneI.id, coordinates: '1820,340,24')
+mucusNinjas = Exhibit.create(name: "Mucus Ninjas", zone_id: zoneI.id, coordinates: '970,320,24')
+bendyMicro = Exhibit.create(name: "Bendy Microscope", zone_id: zoneI.id, coordinates: '843,450,40')
 
 #Descriptions
 

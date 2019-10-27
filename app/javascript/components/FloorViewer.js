@@ -36,79 +36,15 @@ class FloorViewer extends React.Component {
       });
     }
 
-    MAP.areas.push({
-        name: "1",
-        coords: [1561,636,40],
+    for (var i = 0; i < this.props.exhibits.length; i++) {
+      MAP.areas.push({
+        id: this.props.exhibits[i].id,
+        name: this.props.exhibits[i].name,
+        coords: Array.from(this.props.exhibits[i].coordinates.split(','), Number),
         shape: 'circle',
         preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "2",
-        coords: [1538,549,42],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "3",
-        coords: [1561,636,40],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "4",
-        coords: [1219,545,32],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "5",
-        coords: [1290,545,35],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "6",
-        coords: [1561,636,40],
-        shape: 'circle',
-     	preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "7",
-        coords: [1408,457,39],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-
-    MAP.areas.push({
-        name: "8",
-        coords: [950,460,37],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-    MAP.areas.push({
-        name: "9",
-        coords: [993,654,37],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-    MAP.areas.push({
-        name: "10",
-        coords: [843,642,40],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
-    MAP.areas.push({
-        name: "11",
-        coords: [1838,441,37],
-        shape: 'circle',
-        preFillColor: "lightblue"
-     });
+      });
+    }
 
     return (
       <React.Fragment>
