@@ -8,6 +8,7 @@ import Logo from "../../assets/images/gsc_logo.svg";
 import MapImage from "../../assets/images/floor_1.png";
 import PropTypes from "prop-types";
 import ImageMapper from 'react-image-mapper';
+import Button from "react-bootstrap/Button";
 
 class FloorViewer extends React.Component {
   clickedOutside(evt) {
@@ -128,6 +129,13 @@ class FloorViewer extends React.Component {
           />
         </Navbar>
         <Container fluid>
+          <Row>
+            <Col>
+              <div className='mt-3'>
+              <Button variant="light" size="lg" href="/">Back</Button>
+              </div>
+            </Col>
+          </Row>
           <Row className="text-center">
             <Col>
               <h1 className="display-4">Floor {this.props.params[0].floor_id} </h1>
