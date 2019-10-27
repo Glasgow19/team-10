@@ -54,12 +54,12 @@ ActiveRecord::Schema.define(version: 2019_10_27_020630) do
     t.bigint "exhibit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "autism"
-    t.boolean "visual_impairment"
-    t.boolean "hearing_impairment"
-    t.boolean "dementia"
-    t.boolean "epilepsy"
-    t.boolean "physical"
+    t.boolean "autism", default: false
+    t.boolean "visual_impairment", default: false
+    t.boolean "hearing_impairment", default: false
+    t.boolean "dementia", default: false
+    t.boolean "epilepsy", default: false
+    t.boolean "physical", default: false
     t.index ["exhibit_id"], name: "index_tags_on_exhibit_id"
   end
 
