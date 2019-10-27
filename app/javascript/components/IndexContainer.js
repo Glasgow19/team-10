@@ -67,29 +67,22 @@ class IndexContainer extends React.Component {
             className="d-inline-block align-top"
           />
         </Navbar>
-        <Container>
-          <Row>
+        <Container fluid>
+          <Row className="text-center">
             <Col>
               <h1>Interactive Floor Map</h1>
             </Col>
           </Row>
-          <Row>
-            <Col sm={8}>
+          <Row className="text-center">
+            <Col className="text-center">
               <ImageMapper
-                width={700}
+                width={800}
                 imgWidth={3000}
                 src={MapImage}
                 map={MAP}
-                className="img-fluid"
                 onImageClick={evt => this.clickedOutside(evt)}
                 onClick={area => this.clicked(area)}
               />
-            </Col>
-            <Col sm={4}>
-              <Row>
-                <h1>Accessability Filters</h1>
-              </Row>
-              <Row>Checkboxes here</Row>
             </Col>
           </Row>
         </Container>
