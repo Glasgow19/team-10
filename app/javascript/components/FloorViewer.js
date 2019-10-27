@@ -11,6 +11,8 @@ import ModalViewer from "./ModalViewer";
 import ImageMapper from 'react-image-mapper';
 import Button from "react-bootstrap/Button";
 import Hearing from "../../assets/images/hearing_impairment.png"
+import Visual from "../../assets/images/visual_impairment.png"
+import Placeholder from "../../assets/images/placeholder.png"
 
 class FloorViewer extends React.Component {
   state = { show: false };
@@ -123,10 +125,10 @@ class FloorViewer extends React.Component {
             </Col>
             <Col sm={4}>
               <h3>Suitable for</h3>
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <p>This exhibition is audio described </p>
-                  <span class="badge badge-primary badge-pill">
+              <ul className="list-group">
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  <p>This exhibition is audio described</p>
+                  <span className="badge badge-primary badge-pill">
                     <img
                       alt=""
                       src={Hearing}
@@ -136,20 +138,46 @@ class FloorViewer extends React.Component {
                     />
                   </span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Dapibus ac facilisis in
-                  <span class="badge badge-primary badge-pill">2</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Morbi leo risus
-                  <span class="badge badge-primary badge-pill">1</span>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                  <p>This exhibition supports people with visual impairment</p>
+                  <span className="badge badge-primary badge-pill">
+                    <img
+                      alt=""
+                      src={Visual}
+                      width="30"
+                      height="30"
+                      className="d-inline-block align-top"
+                    />
+                  </span>
                 </li>
               </ul>
             </Col>
           </Row>
           <Row>
-            <Col sm>Test</Col>
-            <Col sm>Test</Col>
+            <Col sm>
+              <img
+                alt=""
+                src={Placeholder}
+                width="350"
+                height="300"
+                className="d-inline-block align-top"
+              />
+            </Col>
+            <Col sm>
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Key Facts</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">First item</li>
+                    <li class="list-group-item">Second item</li>
+                    <li class="list-group-item">Third item</li>
+                    <li class="list-group-item">Fourth item</li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
             <Col sm>Test</Col>
           </Row>
         </ModalViewer>
