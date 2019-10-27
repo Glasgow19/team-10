@@ -12,13 +12,10 @@ import ImageMapper from 'react-image-mapper';
 class IndexContainer extends React.Component {
   clickedOutside(evt) {
 		const coords = { x: evt.nativeEvent.layerX, y: evt.nativeEvent.layerY };
-		this.setState({
-			msg: `You clicked on the image at coords ${JSON.stringify(coords)} !`
-		});
   }
 
   clicked(area) {
-		console.log(area);
+    location.replace(`/floor_view/${area.name}`)
 	}
 
   render() {
