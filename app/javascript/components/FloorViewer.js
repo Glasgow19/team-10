@@ -44,25 +44,25 @@ class FloorViewer extends React.Component {
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossOrigin="anonymous"
         />
-        <Navbar style={navStyle}>
+        <Navbar style={navStyle} className="justify-content-center">
           <img
             alt=""
             src={Logo}
-            width="80"
-            height="80"
+            width="100"
+            height="100"
             className="d-inline-block align-top"
           />
         </Navbar>
         <Container fluid>
           <Row className="text-center">
             <Col>
-              <h1>Floor {this.props.params.floor_id} </h1>
+              <h1 className="display-4">Floor {this.props.params[0].floor_id} </h1>
             </Col>
           </Row>
           <Row className="text-center">
-            <Col className="text-center">
+            <Col className="d-flex justify-content-center">
               <ImageMapper
-                width={800}
+                width={1050}
                 imgWidth={3000}
                 src={MapImage}
                 map={MAP}
