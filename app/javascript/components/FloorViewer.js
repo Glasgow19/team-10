@@ -56,7 +56,7 @@ class FloorViewer extends React.Component {
         <Container fluid>
           <Row className="text-center">
             <Col>
-              <h1>Floor </h1>
+              <h1>Floor {this.props.params.floor_id} </h1>
             </Col>
           </Row>
           <Row className="text-center">
