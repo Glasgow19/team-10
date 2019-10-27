@@ -18,9 +18,9 @@ zoneC = Zone.create!(name: "C", floor_id: lvl1.id)
 zoneD = Zone.create!(name: "D", floor_id: lvl2.id)
 zoneE = Zone.create!(name: "E", floor_id: lvl2.id)
 zoneF = Zone.create!(name: "F", floor_id: lvl2.id)
-zoneG = Zone.create!(name: "G", floor_id: lvl3.id)
-zoneH = Zone.create!(name: "H", floor_id: lvl3.id)
-zoneI = Zone.create!(name: "I", floor_id: lvl3.id)
+zoneG = Zone.create!(name: "G", floor_id: lvl3.id, coordinates: '138,368,151,344,135,339,252,183,511,209,840,230,795,392,702,389,700,378,511,357,461,397,236,381,172,373')
+zoneH = Zone.create!(name: "H", floor_id: lvl3.id, coordinates: '851,230,806,394,981,363,986,373,1413,413,1606,384,1627,265,1179,246')
+zoneI = Zone.create!(name: "I", floor_id: lvl3.id, coordinates: '1951,458,2112,503,2258,490,2266,513,2308,445,2295,439,2303,421,2239,384,2247,376,2767,453,2870,310,2846,310,2865,283,2253,275,1638,267,1617,381,1821,368,1847,386,1932,336,2027,402')
 
 #Exhibits
 
